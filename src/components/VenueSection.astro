@@ -1,0 +1,142 @@
+---
+---
+<section class="section" id="venue">
+  <div class="section__inner">
+    <div class="split">
+
+      <div class="split__image">
+        <div class="split__image-box">
+          <img src="/images/deck-jungle.jpg" alt="The deck at Casa Arkaana, surrounded by jungle" loading="lazy">
+          <div class="split__image-label">Casa Arkaana, Tulum</div>
+        </div>
+      </div>
+
+      <div class="split__text">
+        <span class="eyebrow">Conscious Unions</span>
+        <span class="gold-line"></span>
+        <h2 class="split__heading">Celebrate Love in the Heart of <em>the Mayan Jungle.</em></h2>
+        <p class="split__body">
+          At Casa Arkaana, a wedding is more than a day — it is a sacred journey of love that can be as soulful, stylish, or wildly creative as you dream it to be. Some couples choose the intimacy of a retreat-style gathering, with yoga, cacao, and quiet moments of connection. Others embrace the free-spirited energy of a boho jungle celebration, adorned with woven lamps, flowers, and candlelight.
+        </p>
+        <p class="split__body">
+          And for those who wish, the night can carry the vibrant pulse of a festival under the stars, with music, lights, and dancing deep into the jungle night.
+        </p>
+        <p class="split__body">
+          Our off-grid sanctuary near Tulum offers a canvas where all these visions are possible — rooted in nature, supported by community, and designed with intention.
+        </p>
+        <div class="split__detail">
+          <span class="split__detail-item">20 minutes from Tulum town</span>
+          <span class="split__detail-item">Private gated property</span>
+          <span class="split__detail-item">20–60 guests, intimate only</span>
+          <span class="split__detail-item">3 nights accommodation on-site</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+    align-items: center;
+  }
+
+  .split__image-box {
+    background: var(--color-cream);
+    aspect-ratio: 4/5;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .split__image-box img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .split__image-label {
+    position: absolute;
+    bottom: var(--sp-3);
+    left: var(--sp-3);
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .split__heading {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: var(--sp-3);
+  }
+
+  .split__heading em { font-style: italic; }
+
+  .split__body {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--color-text);
+    margin-bottom: var(--sp-4);
+    max-width: 480px;
+  }
+
+  .split__detail {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+
+  .split__detail-item {
+    display: flex;
+    align-items: baseline;
+    gap: var(--sp-2);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--color-neutral);
+  }
+
+  .split__detail-item::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: var(--color-gold);
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 768px) {
+    .split {
+      grid-template-columns: 55fr 45fr;
+      gap: var(--sp-8);
+    }
+
+    .split__image-box {
+      aspect-ratio: 3/4;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .split {
+      gap: var(--sp-15);
+    }
+
+    .split__image-box {
+      aspect-ratio: unset;
+      min-height: 560px;
+    }
+  }
+</style>

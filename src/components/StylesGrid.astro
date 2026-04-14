@@ -1,0 +1,153 @@
+---
+---
+<section class="section" id="styles">
+  <div class="section__inner">
+
+    <div class="styles-header">
+      <span class="eyebrow">How it can look</span>
+      <span class="gold-line"></span>
+      <h2 class="section-heading">Three visions. <em>One place.</em></h2>
+    </div>
+
+    <div class="styles-grid">
+
+      <!-- Featured: Boho Jungle -->
+      <div class="styles-grid__featured">
+        <div class="styles-grid__featured-bg" style="background-image: url('/images/wedding-ceremony.jpg');"></div>
+        <div class="styles-grid__overlay"></div>
+        <div class="styles-grid__label" style="bottom: var(--sp-6); left: var(--sp-6);">
+          <p class="styles-grid__label-sub">Featured</p>
+          <p class="styles-grid__label-text">Boho Jungle</p>
+        </div>
+      </div>
+
+      <!-- Two smaller -->
+      <div class="styles-grid__small-pair">
+        <div class="styles-grid__small" style="background-image: url('/images/ceremony-circle.jpg');">
+          <div class="styles-grid__overlay"></div>
+          <div class="styles-grid__label">
+            <p class="styles-grid__label-text" style="font-size: 16px;">The Retreat Wedding</p>
+            <p class="styles-grid__label-sub">Sacred · Intimate · Ceremony-focused</p>
+          </div>
+        </div>
+        <div class="styles-grid__small" style="background-image: url('/images/wedding-3.jpg');">
+          <div class="styles-grid__overlay"></div>
+          <div class="styles-grid__label">
+            <p class="styles-grid__label-text" style="font-size: 16px;">Festival under the Stars</p>
+            <p class="styles-grid__label-sub">Dance · Fire · Celebration</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="styles-note">
+      No two weddings at Casa Arkaana look the same. Tell us what you're imagining — we'll build it with you.
+    </p>
+
+  </div>
+</section>
+
+<style>
+  .styles-header {
+    margin-bottom: var(--sp-8);
+  }
+
+  .styles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-3);
+  }
+
+  .styles-grid__featured {
+    position: relative;
+    background: var(--color-cream);
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+
+  .styles-grid__featured-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .styles-grid__small-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-3);
+  }
+
+  .styles-grid__small {
+    position: relative;
+    background: var(--color-cream);
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .styles-grid__label {
+    position: absolute;
+    bottom: var(--sp-3);
+    left: var(--sp-3);
+    right: var(--sp-3);
+  }
+
+  .styles-grid__label-text {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: clamp(16px, 2.5vw, 22px);
+    color: var(--color-white);
+    line-height: 1.2;
+  }
+
+  .styles-grid__label-sub {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-top: 4px;
+  }
+
+  .styles-grid__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 50%);
+  }
+
+  .styles-note {
+    margin-top: var(--sp-6);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--color-neutral);
+    max-width: 520px;
+  }
+
+  @media (min-width: 768px) {
+    .styles-grid {
+      grid-template-columns: 3fr 2fr;
+    }
+
+    .styles-grid__featured {
+      aspect-ratio: unset;
+      min-height: 480px;
+    }
+
+    .styles-grid__small-pair {
+      grid-column: 2;
+      grid-row: 1;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .styles-grid__small {
+      aspect-ratio: unset;
+      height: 100%;
+    }
+  }
+</style>

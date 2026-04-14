@@ -1,0 +1,120 @@
+---
+---
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <p class="footer__logo">Tulum Jungle Wedding</p>
+      <p class="footer__tagline">A Casa Arkaana venue</p>
+    </div>
+    <ul class="footer__links">
+      <li><a href="#venue">The Venue</a></li>
+      <li><a href="#styles">Three Styles</a></li>
+      <li><a href="#sapote">The Sapote Tree</a></li>
+      <li><a href="#hosts">Our Story</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer__bottom-wrap">
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 tulumjunglewedding.com</p>
+      <a href="https://casaarkaana.com" class="footer__ca-link" target="_blank" rel="noopener">casaarkaana.com →</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #2a2a27;
+    padding: var(--sp-8) var(--sp-4);
+  }
+
+  .footer__inner {
+    max-width: var(--max-content);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-6);
+    margin-bottom: var(--sp-6);
+  }
+
+  .footer__logo {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    color: var(--color-white);
+  }
+
+  .footer__tagline {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.4);
+    margin-top: 6px;
+  }
+
+  .footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3) var(--sp-4);
+    list-style: none;
+  }
+
+  .footer__links a {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    transition: color 0.2s;
+  }
+
+  .footer__links a:hover { color: var(--color-gold); }
+
+  .footer__bottom-wrap {
+    max-width: var(--max-content);
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .footer__bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: var(--sp-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+
+  .footer__copy {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .footer__ca-link {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(181,144,78,0.7);
+    transition: color 0.2s;
+  }
+
+  .footer__ca-link:hover { color: var(--color-gold); }
+
+  @media (min-width: 768px) {
+    .footer__inner {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer__bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+</style>

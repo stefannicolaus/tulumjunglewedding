@@ -1,0 +1,151 @@
+---
+---
+<nav class="nav" id="main-nav">
+  <a href="#" class="nav__logo">
+    <img src="/images/ca-logo.png" alt="Casa Arkaana" class="nav__logo-img">
+    <span class="nav__logo-text">Tulum Jungle Wedding</span>
+  </a>
+  <ul class="nav__links">
+    <li><a href="#venue">The Venue</a></li>
+    <li><a href="#styles">Three Styles</a></li>
+    <li><a href="#pricing">Packages</a></li>
+    <li><a href="#hosts">Our Story</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#contact" class="nav__cta">Start Planning</a>
+</nav>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--sp-3) var(--sp-4);
+    transition: background 0.4s var(--ease), padding 0.4s var(--ease);
+  }
+
+  .nav--scrolled {
+    background: rgba(250,250,247,0.96);
+    backdrop-filter: blur(8px);
+    padding: 14px var(--sp-4);
+    border-bottom: 1px solid var(--color-cream);
+  }
+
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .nav__logo-img {
+    height: 48px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: filter 0.4s, opacity 0.4s;
+  }
+
+  .nav--scrolled .nav__logo-img {
+    filter: brightness(0);
+    opacity: 1;
+  }
+
+  .nav__logo-text {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.9);
+    margin-left: 10px;
+    transition: color 0.4s;
+    white-space: nowrap;
+  }
+
+  .nav--scrolled .nav__logo-text {
+    color: var(--color-text);
+  }
+
+  .nav__links {
+    display: none;
+    list-style: none;
+    gap: var(--sp-4);
+  }
+
+  .nav__links a {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    transition: color 0.3s;
+    position: relative;
+  }
+
+  .nav__links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--color-gold);
+    transition: width 0.3s var(--ease);
+  }
+
+  .nav__links a:hover::after { width: 100%; }
+
+  .nav--scrolled .nav__links a {
+    color: var(--color-text);
+  }
+
+  .nav__links a:hover { color: var(--color-gold); }
+
+  .nav__cta {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 10px 24px;
+    transition: all 0.3s;
+    flex-shrink: 0;
+  }
+
+  .nav--scrolled .nav__cta {
+    color: var(--color-text);
+    border-color: var(--color-gold);
+  }
+
+  .nav__cta:hover {
+    background: var(--color-gold);
+    color: var(--color-white);
+    border-color: var(--color-gold);
+  }
+
+  @media (min-width: 768px) {
+    .nav__links { display: flex; }
+  }
+</style>
+
+<script>
+  const nav = document.getElementById('main-nav');
+  if (nav) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        nav.classList.add('nav--scrolled');
+      } else {
+        nav.classList.remove('nav--scrolled');
+      }
+    }, { passive: true });
+  }
+</script>

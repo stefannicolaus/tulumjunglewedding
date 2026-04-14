@@ -1,0 +1,185 @@
+---
+const items = [
+  { num: 'i',    img: '/images/deck-jungle.jpg',        alt: 'The private jungle deck at Casa Arkaana',                          title: 'Exclusive Venue Use',    detail: '4pm to midnight, private and entirely yours' },
+  { num: 'ii',   img: '/images/pool-sunbeds-jungle.jpg', alt: 'Sunbeds beside the cenote pool surrounded by jungle',             title: '3 Nights On-Site',       detail: 'Accommodation for you and your closest circle' },
+  { num: 'iii',  img: '/images/vg/IMG_5042.JPG',         alt: 'String lights canopy over the jungle wedding ceremony',           title: 'String Lights',          detail: 'Throughout the jungle canopy — the light changes everything' },
+  { num: 'iv',   img: '/images/fire-night.jpg',           alt: 'Ceremonial bonfire at night in the Tulum jungle',                title: 'Sacred Bonfire',         detail: 'Ceremonial fire at the heart of the celebration' },
+  { num: 'v',    img: '/images/wedding-3.jpg',            alt: 'The wooden dance floor under string lights at Casa Arkaana',     title: 'Wooden Dance Floor',     detail: 'Handcrafted, set under the open sky' },
+  { num: 'vi',   img: '/images/wedding-ceremony.jpg',     alt: 'Ceremonial altar decorated with flowers at Casa Arkaana',       title: 'Ceremonial Altar',       detail: 'Designed and set up by Maja and Asdrubal' },
+  { num: 'vii',  img: '/images/ca-ig-ceremony.jpg',       alt: 'Flower petals and ceremonial details — welcome moment at Casa Arkaana', title: 'Welcome Drink', detail: 'For all your guests upon arrival' },
+];
+---
+<section class="section section--cream">
+  <div class="section__inner">
+
+    <div class="included__header">
+      <div class="included__header-left">
+        <span class="eyebrow">The Package</span>
+        <span class="gold-line"></span>
+        <h2 class="included__heading">What's <em>included.</em></h2>
+      </div>
+      <div class="included__header-right">
+        <p class="included__sub">Everything you need to make the space yours. Catering and photography are not included — we connect you with trusted local partners.</p>
+      </div>
+    </div>
+
+    <div class="included__grid">
+      {items.map((item) => (
+        <div class="included__card">
+          <div class="included__card-photo">
+            <img src={item.img} alt={item.alt} loading="lazy">
+            <div class="included__card-photo-overlay"></div>
+            <span class="included__card-num">{item.num}</span>
+          </div>
+          <div class="included__card-body">
+            <p class="included__card-title">{item.title}</p>
+            <p class="included__card-detail">{item.detail}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="included__cta">
+      <p class="included__cta-text">This is everything. No surprises. <em>Just your wedding.</em></p>
+      <a href="#contact" class="btn-primary">Check Availability for Your Date</a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .included__header {
+    margin-bottom: var(--sp-8);
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-4);
+  }
+
+  .included__heading {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: clamp(28px, 3.5vw, 42px);
+    line-height: 1.2;
+    margin-bottom: var(--sp-3);
+  }
+
+  .included__heading em { font-style: italic; }
+
+  .included__sub {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--color-neutral);
+    line-height: 1.6;
+  }
+
+  .included__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .included__card {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-cream);
+  }
+
+  .included__card-photo {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+  }
+
+  .included__card-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.7s var(--ease);
+    display: block;
+  }
+
+  .included__card:hover .included__card-photo img {
+    transform: scale(1.04);
+  }
+
+  .included__card-photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(26,26,24,0.6) 0%, transparent 55%);
+  }
+
+  .included__card-num {
+    position: absolute;
+    top: var(--sp-2);
+    left: var(--sp-2);
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 11px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.1em;
+  }
+
+  .included__card-body {
+    padding: var(--sp-3) var(--sp-3) var(--sp-4);
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-cream);
+  }
+
+  .included__card-title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-text);
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+
+  .included__card-detail {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--color-neutral);
+    line-height: 1.5;
+  }
+
+  @media (min-width: 640px) {
+    .included__header {
+      grid-template-columns: 1fr 1fr;
+      align-items: end;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .included__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .included__cta {
+    margin-top: var(--sp-8);
+    text-align: center;
+    padding: var(--sp-8) var(--sp-4);
+    background: var(--color-bg);
+    border: 1px solid var(--color-cream);
+  }
+
+  .included__cta-text {
+    font-family: var(--font-serif);
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 300;
+    color: var(--color-text);
+    line-height: 1.4;
+    margin-bottom: var(--sp-4);
+  }
+
+  .included__cta-text em {
+    font-style: italic;
+    color: var(--color-gold);
+  }
+</style>

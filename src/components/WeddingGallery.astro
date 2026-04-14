@@ -1,0 +1,127 @@
+---
+---
+<section class="gallery">
+  <div class="gallery__intro">
+    <span class="eyebrow">Three Days in the Jungle</span>
+    <span class="gold-line"></span>
+    <h2 class="section-heading">This is what <em>it looks like.</em></h2>
+  </div>
+
+    <!-- Row 1: 1 large landscape + 1 portrait -->
+    <div class="gallery__row gallery__row--1">
+      <div class="gallery__cell">
+        <img src="/images/vg/IMG_5042.JPG" alt="Wedding ceremony under string lights and prayer flags in the Tulum jungle" loading="lazy">
+      </div>
+      <div class="gallery__cell">
+        <img src="/images/vg/IMG_5072.JPG" alt="Bride and groom first dance on the wooden dance floor surrounded by jungle" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Row 2: 3 equal columns -->
+    <div class="gallery__row gallery__row--2">
+      <div class="gallery__cell">
+        <img src="/images/wedding-2.jpg" alt="Guests mingling under string lights in the jungle evening" loading="lazy">
+      </div>
+      <div class="gallery__cell">
+        <img src="/images/wedding-4.jpg" alt="Bride and groom at the wedding dinner table, jungle and warm lights behind them" style="object-position: top;" loading="lazy">
+      </div>
+      <div class="gallery__cell">
+        <img src="/images/vg/IMG_5055.JPG" alt="Colourful flower arrangements along the jungle pathway with string lights" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Row 3: portrait + wide landscape -->
+    <div class="gallery__row gallery__row--3">
+      <div class="gallery__cell">
+        <img src="/images/maja-asdru-wedding.webp" alt="Wedding couple — Maja and Asdrubal on their wedding day" style="object-position: top;" loading="lazy">
+      </div>
+      <div class="gallery__cell">
+        <img src="/images/fire-circle-pool.jpg" alt="Friends gathered around the bonfire with the cenote pool lit up in the background" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Row 4: 2 equal landscape -->
+    <div class="gallery__row gallery__row--4">
+      <div class="gallery__cell">
+        <img src="/images/wedding-3.jpg" alt="The wooden dance floor under a canopy of string lights with dinner tables in the jungle" loading="lazy">
+      </div>
+      <div class="gallery__cell">
+        <img src="/images/ca-ig-ceremony.jpg" alt="Flower petals floating in water — wedding decoration detail at Casa Arkaana" loading="lazy">
+      </div>
+    </div>
+
+</section>
+
+<style>
+  .gallery {
+    padding: var(--sp-10) 0 0;
+    background: var(--color-bg);
+  }
+
+  .gallery__intro {
+    padding: 0 var(--sp-4);
+    margin-bottom: var(--sp-8);
+    max-width: var(--max-content);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 768px) {
+    .gallery__intro {
+      padding: 0 var(--sp-6);
+    }
+  }
+
+  .gallery__row {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .gallery__row:last-child {
+    margin-bottom: 0;
+  }
+
+  .gallery__cell {
+    overflow: hidden;
+  }
+
+  .gallery__cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  /* Mobile: single column stacked */
+  .gallery__row--1 { grid-template-columns: 1fr; }
+  .gallery__row--2 { grid-template-columns: 1fr; }
+  .gallery__row--3 { grid-template-columns: 1fr; }
+  .gallery__row--4 { grid-template-columns: 1fr 1fr; }
+
+  .gallery__row--1 .gallery__cell { height: 280px; }
+  .gallery__row--2 .gallery__cell { height: 240px; }
+  .gallery__row--3 .gallery__cell { height: 260px; }
+  .gallery__row--4 .gallery__cell { height: 220px; }
+
+  @media (min-width: 640px) {
+    .gallery__row--1 { grid-template-columns: 1.6fr 1fr; }
+    .gallery__row--1 .gallery__cell { height: 360px; }
+
+    .gallery__row--2 { grid-template-columns: 1fr 1fr 1fr; }
+    .gallery__row--2 .gallery__cell { height: 240px; }
+
+    .gallery__row--3 { grid-template-columns: 1fr 1.8fr; }
+    .gallery__row--3 .gallery__cell { height: 300px; }
+
+    .gallery__row--4 .gallery__cell { height: 260px; }
+  }
+
+  @media (min-width: 1024px) {
+    .gallery__row--1 .gallery__cell { height: 420px; }
+    .gallery__row--2 .gallery__cell { height: 280px; }
+    .gallery__row--3 .gallery__cell { height: 360px; }
+    .gallery__row--4 .gallery__cell { height: 300px; }
+  }
+</style>

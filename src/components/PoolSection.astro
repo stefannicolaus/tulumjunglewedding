@@ -1,0 +1,63 @@
+---
+---
+<section class="pool-section">
+  <div class="pool-section__inner">
+    <img src="/images/pool-gps.jpg" alt="The cenote-fed pool at Casa Arkaana at dusk, surrounded by the Tulum jungle" loading="lazy">
+    <div class="pool-section__caption">
+      <p class="pool-section__text">A cenote-fed pool.<br><span class="pool-section__sub">In the middle of the Tulum jungle.</span></p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pool-section {
+    padding: 0;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .pool-section__inner {
+    position: relative;
+    height: clamp(360px, 55vw, 620px);
+    overflow: hidden;
+    background: var(--color-bg);
+  }
+
+  .pool-section__inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.92;
+    display: block;
+  }
+
+  .pool-section__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: clamp(24px, 4vw, 48px);
+    background: linear-gradient(to top, rgba(26,26,24,0.72) 0%, rgba(26,26,24,0.1) 60%, transparent 100%);
+    line-height: 1.5;
+  }
+
+  .pool-section__text {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: 300;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
+
+  .pool-section__sub {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.72em;
+    font-style: normal;
+    font-family: var(--font-sans);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+</style>

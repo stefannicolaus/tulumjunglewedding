@@ -1,0 +1,74 @@
+---
+---
+<section class="hosts-teaser">
+  <div class="hosts-teaser__inner">
+    <div class="hosts-teaser__avatar">
+      <img src="/images/maja-asdru-official.jpg" alt="Maja and Asdrubal, hosts of Casa Arkaana">
+    </div>
+    <div class="hosts-teaser__text">
+      <p class="hosts-teaser__label">Your hosts</p>
+      <p class="hosts-teaser__body">Maja &amp; Asdrubal built Casa Arkaana with their hands — and celebrated their own wedding here. When you marry here, you marry in their home.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hosts-teaser {
+    padding: var(--sp-6) var(--sp-4);
+    background: var(--color-cream);
+  }
+
+  .hosts-teaser__inner {
+    max-width: var(--max-content);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: var(--sp-4);
+    align-items: center;
+  }
+
+  .hosts-teaser__avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .hosts-teaser__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
+
+  .hosts-teaser__label {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--color-neutral);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .hosts-teaser__body {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: clamp(16px, 1.8vw, 19px);
+    color: var(--color-text);
+    line-height: 1.5;
+  }
+
+  @media (min-width: 768px) {
+    .hosts-teaser__inner {
+      grid-template-columns: 72px 1fr;
+    }
+
+    .hosts-teaser__avatar {
+      width: 72px;
+      height: 72px;
+    }
+  }
+</style>

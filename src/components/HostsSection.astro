@@ -1,0 +1,138 @@
+---
+---
+<section class="section section--cream hosts" id="hosts">
+  <div class="section__inner">
+    <div class="hosts-split">
+
+      <div class="hosts-split__image">
+        <div class="hosts-split__image-box">
+          <img src="/images/maja-asdru-official.jpg" alt="Maja and Asdrubal, hosts of Casa Arkaana" loading="lazy">
+          <div class="hosts-split__image-label">Maja &amp; Asdrubal · Casa Arkaana</div>
+        </div>
+      </div>
+
+      <div class="hosts-split__text">
+        <span class="eyebrow">The Hosts</span>
+        <span class="gold-line"></span>
+        <h2 class="hosts-split__heading">We are Maja and Asdrubal.</h2>
+        <p class="hosts-split__body">
+          We built Casa Arkaana with our hands, our family, and twelve years of love for this land. When you marry here, you marry in our home.
+        </p>
+        <p class="hosts-split__body">
+          We've hosted two weddings without ever promoting them. People found us because they were looking for something real — a micro wedding in the jungle, intimate, away from the convention. That's who we build for. We take on six weddings a year — that's it.
+        </p>
+
+        <div class="hosts-pull-quote">
+          <p class="hosts-pull-quote__text">
+            "The best place to have a wonderful ceremony in the Maloka and to rest and digest near the pool. You will feel the love they put in the place."
+          </p>
+          <p class="hosts-pull-quote__attr">— Google Review, 5 stars</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .hosts-split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+    align-items: center;
+  }
+
+  .hosts-split__image-box {
+    background: var(--color-cream);
+    aspect-ratio: 4/5;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hosts-split__image-box img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hosts-split__image-label {
+    position: absolute;
+    bottom: var(--sp-3);
+    left: var(--sp-3);
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .hosts-split__heading {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: var(--sp-3);
+  }
+
+  .hosts-split__body {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--color-text);
+    margin-bottom: var(--sp-4);
+    max-width: 480px;
+  }
+
+  .hosts-pull-quote {
+    margin-top: var(--sp-4);
+    padding: var(--sp-4);
+    background: var(--color-cream);
+    border-left: 2px solid var(--color-gold);
+  }
+
+  .hosts-pull-quote__text {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: var(--sp-2);
+  }
+
+  .hosts-pull-quote__attr {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--color-neutral);
+  }
+
+  @media (min-width: 768px) {
+    .hosts-split {
+      grid-template-columns: 55fr 45fr;
+      gap: var(--sp-8);
+    }
+
+    .hosts-split__image-box {
+      aspect-ratio: 3/4;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .hosts-split {
+      gap: var(--sp-15);
+    }
+
+    .hosts-split__image-box {
+      aspect-ratio: unset;
+      min-height: 560px;
+    }
+  }
+</style>

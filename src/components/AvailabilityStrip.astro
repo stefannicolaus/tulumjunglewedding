@@ -1,0 +1,41 @@
+---
+---
+<div class="availability-strip">
+  <span class="availability-strip__dot">● 2026 Availability</span>
+  <span class="availability-strip__text">Only a few spots left during high season — enquire early</span>
+</div>
+
+<style>
+  .availability-strip {
+    text-align: center;
+    padding: 12px var(--sp-4);
+    background: #1D3828;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .availability-strip__dot {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(181,144,78,0.9);
+  }
+
+  .availability-strip__text {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+  }
+
+  @media (min-width: 640px) {
+    .availability-strip {
+      flex-direction: row;
+      justify-content: center;
+      gap: 16px;
+    }
+  }
+</style>

@@ -1,0 +1,169 @@
+---
+---
+<section class="hero">
+  <div class="hero__image"></div>
+  <div class="hero__overlay"></div>
+
+  <div class="hero__content">
+    <span class="hero__eyebrow">Casa Arkaana · Tulum, Mexico</span>
+    <h1 class="hero__h1">A Jungle Wedding Venue for Sacred, Soulful<br><em>Celebrations in Tulum.</em></h1>
+    <p class="hero__sub">Tie the knot at Casa Arkaana, a majestic jungle venue, perfect for conscious weddings where you can gather and connect your tribes and lineages in celebration of your union and love.</p>
+    <a href="#contact" class="btn-primary btn-primary--light">Start Planning</a>
+    <div class="hero__scarcity">
+      <span class="hero__scarcity-dot"></span>
+      Accepting 2026 &amp; 2027 enquiries — limited dates
+    </div>
+  </div>
+
+  <div class="hero__scroll">
+    <span>Scroll</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    height: 100svh;
+    min-height: 600px;
+    background: var(--color-green);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .hero__image {
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/wedding-2.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(10,26,16,0.85) 0%,
+      rgba(10,26,16,0.4) 40%,
+      rgba(10,26,16,0.1) 100%
+    );
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 2;
+    padding: var(--sp-10) var(--sp-4) var(--sp-10);
+    max-width: 760px;
+  }
+
+  .hero__eyebrow {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    display: block;
+    margin-bottom: var(--sp-3);
+  }
+
+  .hero__h1 {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: clamp(40px, 7vw, 88px);
+    line-height: 1.05;
+    color: var(--color-white);
+    letter-spacing: -0.01em;
+    margin-bottom: var(--sp-4);
+  }
+
+  .hero__h1 em {
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .hero__sub {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: clamp(15px, 2vw, 17px);
+    line-height: 1.6;
+    color: rgba(255,255,255,0.75);
+    max-width: 520px;
+    margin-bottom: var(--sp-6);
+  }
+
+  .hero__scarcity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: var(--sp-3);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.10em;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .hero__scarcity-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #7ecb8b;
+    flex-shrink: 0;
+    animation: pulse 2.2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.75); }
+  }
+
+  .hero__scroll {
+    position: absolute;
+    bottom: var(--sp-4);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-1);
+    opacity: 0.5;
+  }
+
+  .hero__scroll span {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-white);
+  }
+
+  .hero__scroll-line {
+    width: 1px;
+    height: 32px;
+    background: var(--color-white);
+    animation: scrollDown 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollDown {
+    0%, 100% { transform: scaleY(1); opacity: 0.5; }
+    50% { transform: scaleY(0.6); opacity: 1; }
+  }
+
+  @media (min-width: 768px) {
+    .hero__content {
+      padding: var(--sp-15) var(--sp-8) var(--sp-15);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .hero__content {
+      padding: var(--sp-15) var(--sp-15) var(--sp-15);
+      max-width: 900px;
+    }
+  }
+</style>

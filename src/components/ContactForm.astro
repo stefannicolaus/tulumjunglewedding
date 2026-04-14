@@ -1,0 +1,233 @@
+---
+---
+<section class="section contact" id="contact">
+  <div class="section__inner">
+    <div class="contact__inner">
+
+      <div class="contact__left">
+        <span class="eyebrow">Start Planning</span>
+        <span class="gold-line"></span>
+        <h2 class="contact__heading">Tell us about <em>your vision.</em></h2>
+        <p class="contact__sub">
+          We read every inquiry personally. This isn't a booking system — it's a conversation. Tell us what you're imagining.
+        </p>
+        <div class="contact__detail-list">
+          <span class="contact__detail">Casa Arkaana, Tulum, Mexico</span>
+          <span class="contact__detail">20–60 guests, intimate weddings only</span>
+          <span class="contact__detail">Limited dates per year</span>
+          <span class="contact__detail">connect@casaarkaana.com</span>
+        </div>
+      </div>
+
+      <div class="contact__right">
+        <form class="form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="STEFAN_WEB3FORMS_KEY">
+          <input type="hidden" name="subject" value="New Wedding Inquiry — Tulum Jungle Wedding">
+          <input type="hidden" name="redirect" value="https://tulumjunglewedding.com/?thanks=1">
+
+          <div class="form__row">
+            <div class="form__field">
+              <label class="form__label" for="name">Your Name(s)</label>
+              <input class="form__input" type="text" id="name" name="name" placeholder="Maja &amp; Asdrubal" required>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="email">Email Address</label>
+              <input class="form__input" type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__field">
+              <label class="form__label" for="date">Wedding Date (or range)</label>
+              <input class="form__input" type="text" id="date" name="date" placeholder="March 2026 or flexible">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="guests">Number of Guests</label>
+              <input class="form__input" type="text" id="guests" name="guests" placeholder="e.g. 30–40">
+            </div>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="vision">Your Vision</label>
+            <textarea class="form__textarea" id="vision" name="vision" placeholder="Tell us what you're imagining — mood, style, what matters most to you..."></textarea>
+          </div>
+
+          <div class="form__footer">
+            <button type="submit" class="form__submit">Send Your Inquiry</button>
+            <p class="form__note">We reply within 48 hours. No pressure, no sales pitch.</p>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    background: var(--color-cream);
+  }
+
+  .contact__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+    align-items: start;
+  }
+
+  .contact__heading {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: clamp(28px, 4vw, 48px);
+    line-height: 1.2;
+    margin-bottom: var(--sp-3);
+  }
+
+  .contact__heading em { font-style: italic; }
+
+  .contact__sub {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--color-neutral);
+    line-height: 1.7;
+    max-width: 400px;
+    margin-bottom: var(--sp-4);
+  }
+
+  .contact__detail-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+
+  .contact__detail {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--color-neutral);
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+  }
+
+  .contact__detail::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 1px;
+    background: var(--color-gold);
+    flex-shrink: 0;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+  }
+
+  .form__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-3);
+  }
+
+  .form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form__label {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-neutral);
+  }
+
+  .form__input,
+  .form__textarea {
+    background: var(--color-white);
+    border: 1px solid rgba(140,136,118,0.3);
+    padding: 14px var(--sp-2);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--color-text);
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .form__input:focus,
+  .form__textarea:focus {
+    border-color: var(--color-gold);
+  }
+
+  .form__input::placeholder,
+  .form__textarea::placeholder {
+    color: var(--color-neutral);
+    opacity: 0.6;
+  }
+
+  .form__textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.65;
+  }
+
+  .form__footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+
+  .form__submit {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    background: var(--color-gold);
+    border: 1px solid var(--color-gold);
+    padding: 16px 40px;
+    cursor: pointer;
+    transition: background 0.3s var(--ease), border-color 0.3s, transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+    align-self: flex-start;
+  }
+
+  .form__submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(181,144,78,0.25);
+  }
+
+  .form__submit:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+
+  .form__note {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--color-neutral);
+    opacity: 0.7;
+  }
+
+  @media (min-width: 640px) {
+    .form__row { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (min-width: 1024px) {
+    .contact__inner {
+      grid-template-columns: 1fr 1.6fr;
+    }
+  }
+</style>

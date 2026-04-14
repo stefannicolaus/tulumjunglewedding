@@ -1,0 +1,121 @@
+---
+---
+<section class="section sapote" id="sapote">
+  <div class="section__inner">
+    <div class="split split--reverse">
+
+      <div class="split__image">
+        <div class="split__image-box">
+          <img src="/images/drone-jungle.jpg" alt="Aerial view of Casa Arkaana deep in the Tulum jungle" loading="lazy">
+          <div class="split__image-label">The Sapote Tree · Casa Arkaana</div>
+        </div>
+      </div>
+
+      <div class="split__text">
+        <span class="eyebrow">The Heart of the Property</span>
+        <span class="gold-line"></span>
+        <h2 class="split__heading">Under the <em class="gold">Sapote Tree.</em></h2>
+        <p class="split__body">
+          There is a tree on this land that has stood for generations. Its canopy fills the ceremony space. Couples exchange vows beneath it. It holds everything.
+        </p>
+        <p class="split__body">
+          You can't book a tree like this anywhere else. That's the point.
+        </p>
+        <a href="#contact" class="btn-primary">Tell Us Your Vision</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .sapote {
+    background: var(--color-cream);
+    color: var(--color-text);
+  }
+
+  .split--reverse {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+    align-items: center;
+  }
+
+  .split--reverse .split__image { order: -1; }
+
+  .split__image-box {
+    background: var(--color-bg);
+    aspect-ratio: 4/5;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .split__image-box img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .split__image-label {
+    position: absolute;
+    bottom: var(--sp-3);
+    left: var(--sp-3);
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .split__heading {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: var(--sp-3);
+    color: var(--color-text);
+  }
+
+  .split__heading em { font-style: italic; }
+  .split__heading .gold { color: var(--color-gold); }
+
+  .split__body {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--color-text);
+    margin-bottom: var(--sp-4);
+    max-width: 480px;
+  }
+
+  @media (min-width: 768px) {
+    .split--reverse {
+      grid-template-columns: 55fr 45fr;
+      gap: var(--sp-8);
+    }
+
+    .split--reverse .split__image { order: 0; }
+    .split--reverse .split__text { order: -1; }
+
+    .split__image-box {
+      aspect-ratio: 3/4;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .split--reverse {
+      gap: var(--sp-15);
+    }
+
+    .split__image-box {
+      aspect-ratio: unset;
+      min-height: 560px;
+    }
+  }
+</style>

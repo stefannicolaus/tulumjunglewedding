@@ -1,0 +1,135 @@
+---
+const items = [
+  {
+    question: "How many guests can we invite?",
+    answer: "Casa Arkaana hosts intimate weddings of 20–60 guests. We don't do large-scale events — every wedding here is personal. The space is designed for people who actually know each other."
+  },
+  {
+    question: "Is Tulum safe for a destination wedding?",
+    answer: "We hear this question often. Our guests travel from across the world. Casa Arkaana is a gated private property, 20 minutes from Tulum town, surrounded by jungle. \"We spent three days there, enjoying the jungle, and left feeling renewed.\" — B & A, 2024. The setting is remote by design — that's what makes it what it is."
+  },
+  {
+    question: "What's not included in the package?",
+    answer: "Catering, photography, and your officiant are not included in the base package — we can connect you with trusted local vendors who know the space well. Everything that is included is listed above."
+  },
+  {
+    question: "Can we arrive before the wedding day?",
+    answer: "Yes. The 3-night accommodation is included — many couples arrive a day early to settle in, explore the cenote pool, and breathe. Arriving calm changes everything about a wedding day."
+  },
+  {
+    question: "How far in advance should we book?",
+    answer: "Most couples book 6–12 months in advance. We accept only a limited number of weddings per year — this is our home, not a venue calendar. If you have a date in mind, reach out early."
+  }
+];
+---
+<section class="section section--cream" id="faq">
+  <div class="section__inner">
+
+    <div class="faq__header">
+      <span class="eyebrow">Common Questions</span>
+      <span class="gold-line"></span>
+      <h2 class="faq__heading">Before you <em>reach out.</em></h2>
+      <p class="faq__sub">The questions we hear most often.</p>
+    </div>
+
+    <div class="faq__list">
+      {items.map((item) => (
+        <details class="faq__item">
+          <summary class="faq__question">
+            {item.question}
+            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </summary>
+          <p class="faq__answer">{item.answer}</p>
+        </details>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+{/* Schema Markup */}
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": items.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+  }))
+})} />
+
+<style>
+  .faq__header {
+    max-width: 520px;
+    margin-bottom: var(--sp-8);
+  }
+
+  .faq__heading {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: clamp(28px, 3.5vw, 44px);
+    line-height: 1.2;
+    margin-bottom: var(--sp-2);
+  }
+
+  .faq__heading em { font-style: italic; }
+
+  .faq__sub {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--color-neutral);
+  }
+
+  .faq__list {
+    max-width: 760px;
+    border-top: 1px solid var(--color-cream);
+  }
+
+  .faq__item {
+    border-bottom: 1px solid var(--color-cream);
+  }
+
+  .faq__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-4);
+    padding: var(--sp-4) 0;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(17px, 2vw, 20px);
+    line-height: 1.3;
+    color: var(--color-text);
+    transition: color 0.2s;
+  }
+
+  .faq__question:hover { color: var(--color-gold); }
+  .faq__question::-webkit-details-marker { display: none; }
+
+  .faq__chevron {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: var(--color-gold);
+    transition: transform 0.3s var(--ease);
+  }
+
+  details[open] .faq__chevron {
+    transform: rotate(180deg);
+  }
+
+  .faq__answer {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--color-neutral);
+    padding-bottom: var(--sp-4);
+    max-width: 620px;
+  }
+</style>
