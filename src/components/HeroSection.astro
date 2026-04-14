@@ -28,9 +28,6 @@
     min-height: 600px;
     background: var(--color-green);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
   }
 
   .hero__image {
@@ -53,10 +50,18 @@
   }
 
   .hero__content {
-    position: relative;
+    position: absolute;
     z-index: 2;
-    padding: var(--sp-10) var(--sp-4) var(--sp-10);
+    bottom: var(--sp-10);
+    left: 0;
+    right: 0;
+    top: 80px;
+    padding: 0 var(--sp-4);
     max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
   }
 
   .hero__eyebrow {
